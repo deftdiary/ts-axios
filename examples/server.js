@@ -89,7 +89,7 @@ function registerErrorRouter () {
   router.get('/error/timeout', function(req, res) {
     setTimeout(() => {
       res.json({
-        msg: `hello world`
+        msg: `hello world -- deft`
       })
     }, 3000)
   })
