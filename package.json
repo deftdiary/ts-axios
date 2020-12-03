@@ -125,5 +125,7 @@
     "body-parser": "^1.18.3",
     "tslint-loader": "^3.5.4"
   },
-  "dependencies": {}
+  "dependencies": {
+    "qs": "^6.9.4"
+  }
 }
