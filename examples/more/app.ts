@@ -1,4 +1,4 @@
-import axios from '../../src/index'
+import axios, {AxiosError} from '../../src/index'
 // import NProgress from 'nprogress'
 
 // document.cookie = 'a=b'
@@ -82,15 +82,32 @@ import axios from '../../src/index'
 // })
 
 /* HTTP授权 */
-axios.post('/more/post', {
-  a: 1,
-  b: 2,
-  c: 3
-}, {
-  auth: {
-    username: 'Deft',
-    password: '123456'
+// axios.post('/more/post', {
+//   a: 1,
+//   b: 2,
+//   c: 3
+// }, {
+//   auth: {
+//     username: 'Deft',
+//     password: '123456'
+//   }
+// }).then(res => {
+//   console.log(res)
+// })
+
+/* validateStatus */
+// axios.get('/more/304').then(res => {
+//   console.log(res)
+// }).catch((e: AxiosError) => {
+//   console.log(e.message)
+// })
+
+axios.get('/more/304', {
+  validateStatus(status) {
+    return status >= 200 && status < 400
   }
 }).then(res => {
   console.log(res)
+}).catch((e: AxiosError) => {
+  console.log(e.message)
 })
