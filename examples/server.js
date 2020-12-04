@@ -198,6 +198,7 @@ function registerMoreRouter () {
     if (type === 'Basic' && username === 'Deft' && password === '123456') {
       res.json(req.body)
     } else {
+    /* HTTP协议中的 Authorization 请求消息头含有服务器用于验证用户代理身份的凭证，通常会在服务器返回401 Unauthorized 状态码以及WWW-Authenticate 消息头之后在后续请求中发送此消息头。*/
       res.status(401)
       res.end('UnAuthorization')
     }
