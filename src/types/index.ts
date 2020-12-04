@@ -78,6 +78,12 @@ export interface AxiosRequestConfig {
   xsrfHeaderName?: string
   onUploadProgress?: (e: ProgressEvent) => void
   onDownloadProgress?: (e: ProgressEvent) => void
+  auth?: AxiosBasicCredentials
+}
+
+export interface AxiosBasicCredentials {
+  username: string
+  password: string
 }
 
 export interface CancelToken {

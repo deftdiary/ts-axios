@@ -20,7 +20,8 @@ export default function xhr(config: AxiosRequestConfig): AxiosPromise {
       xsrfCookieName,
       xsrfHeaderName,
       onUploadProgress,
-      onDownloadProgress
+      onDownloadProgress,
+      auth
     } = config
 
     const request = new XMLHttpRequest()
@@ -36,6 +37,7 @@ export default function xhr(config: AxiosRequestConfig): AxiosPromise {
     processCancel()
 
     request.send(data)
+
     function configureRequest(): void {
       if (responseType) {
         request.responseType = responseType
@@ -101,6 +103,10 @@ export default function xhr(config: AxiosRequestConfig): AxiosPromise {
         if (xsrfValue) {
           headers[xsrfHeaderName!] = xsrfValue
         }
+      }
+
+      if (auth) {
+        headers['Authorization'] = 'Basic' + ' ' + btoa(auth.username + ':' + auth.password)
       }
 
       Object.keys(headers).forEach(name => {
