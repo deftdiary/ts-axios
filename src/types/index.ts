@@ -74,6 +74,10 @@ export interface AxiosRequestConfig {
   transformResponse?: AxiosTransformer | AxiosTransformer[]
   cancelToken?: CancelToken
   withCredentials?: boolean
+  xsrfCookieName?: string
+  xsrfHeaderName?: string
+  onUploadProgress?: (e: ProgressEvent) => void
+  onDownloadProgress?: (e: ProgressEvent) => void
 }
 
 export interface CancelToken {

@@ -128,6 +128,10 @@
     "qs": "^6.9.4"
   },
   "dependencies": {
-    "cookie-parser": "^1.4.5"
+    "@types/nprogress": "^0.2.0",
+    "cookie-parser": "^1.4.5",
+    "css-loader": "^5.0.1",
+    "nprogress": "^0.2.0",
+    "style-loader": "^2.0.0"
   }
 }
