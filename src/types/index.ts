@@ -101,7 +101,7 @@ export interface CancelToken {
   promise: Promise<Cancel>
   reason?: Cancel
 
-  throwIFRequested(): void
+  throwIfRequested(): void
 }
 
 export interface Canceler {

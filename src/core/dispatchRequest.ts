@@ -24,7 +24,7 @@ export default function dispatchRequest(config: AxiosRequestConfig): AxiosPromis
 
 function throwIfCancellationRequested(config: AxiosRequestConfig): void {
   if (config.cancelToken) {
-    config.cancelToken.throwIFRequested()
+    config.cancelToken.throwIfRequested()
   }
 }
 

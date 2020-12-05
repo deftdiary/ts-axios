@@ -1,6 +1,6 @@
-const JasmneCore = require('jasmine-core')
+const JasmineCore = require('jasmine-core')
 // @ts-ignore
 global.getJasmineRequireObj = function() {
-  return JasmneCore
+  return JasmineCore
 }
 require('jasmine-ajax')
