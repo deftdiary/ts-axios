@@ -125,14 +125,14 @@
     "webpack": "^4.28.4",
     "webpack-dev-middleware": "^3.5.0",
     "webpack-hot-middleware": "^2.24.3",
-    "qs": "^6.9.4"
-  },
-  "dependencies": {
+    "qs": "^6.9.4",
     "@types/nprogress": "^0.2.0",
     "atob": "^2.1.2",
     "cookie-parser": "^1.4.5",
     "css-loader": "^5.0.1",
     "nprogress": "^0.2.0",
     "style-loader": "^2.0.0"
+  },
+  "dependencies": {
   }
 }
