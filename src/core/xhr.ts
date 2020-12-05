@@ -1,6 +1,6 @@
 import { AxiosPromise } from '../types/index'
 import { AxiosRequestConfig, AxiosResponse } from '../types'
-import { parseHeaders } from '../helpers/header'
+import { parseHeaders } from '../helpers/headers'
 import { createError } from '../helpers/error'
 import { isURLSameOrigin } from '../helpers/url'
 import cookie from '../helpers/cookie'

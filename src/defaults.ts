@@ -1,5 +1,5 @@
 import { transformRequest, transformResponse } from './helpers/data'
-import { processHeaders } from './helpers/header'
+import { processHeaders } from './helpers/headers'
 import { AxiosRequestConfig } from './types'
 
 const defaults: AxiosRequestConfig = {
